@@ -31,7 +31,6 @@ public class KullaniciChangeListener {
     public void startListening() {
         new Thread(() -> {
             try {
-                // Unwrap PostgreSQL connection
                 java.sql.Connection sqlConn = dataSource.getConnection();
                 PGConnection pgConn = sqlConn.unwrap(PGConnection.class);
 
